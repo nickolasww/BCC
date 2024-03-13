@@ -4,6 +4,7 @@ import AboutUs from './Pages/AboutUs';
 import Scholarship from './Pages/Scholarship';
 import ProgramBoothcamp from './Pages/ProgramBoothcamp';
 import Help from './Pages/Help';
+import SignUp from './Pages/SignUp';
 import Login from './Pages/Login';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Route path='/Scholarship' element={<Scholarship/>}/>
         <Route path='/ProgramBoothcamp' element={<ProgramBoothcamp/>}/>
         <Route path='/Help' element={<Help/>}/>
+        <Route path='/SignUp' element={<SignUp/>}/>
         <Route path='/Login' element={<Login/>}/>
       </Routes>
     </Router>

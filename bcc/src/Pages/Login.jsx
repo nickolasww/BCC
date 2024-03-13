@@ -1,7 +1,9 @@
+import FirstLogin from "../Components/FirstLogin";
+
 const Login = () => {
     return(
         <div>
-            Login
+            <FirstLogin/>
         </div>
     );
 }
