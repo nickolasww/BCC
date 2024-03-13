@@ -6,6 +6,7 @@ import ProgramBoothcamp from './Pages/ProgramBoothcamp';
 import Help from './Pages/Help';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login';
+import Otp from './Pages/Otp';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path='/Help' element={<Help/>}/>
         <Route path='/SignUp' element={<SignUp/>}/>
         <Route path='/Login' element={<Login/>}/>
+        <Route path='/Otp' element={<Otp/>}/>
       </Routes>
     </Router>
   )
