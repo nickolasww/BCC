@@ -1,9 +1,11 @@
+import FirstBoothcamp from "../Components/FirstBoothcamp"
+
 const ProgramBoothcamp = () => {
     return(
         <div>
-            BoothCamp
+            <FirstBoothcamp/>
         </div>
     );
 }
 
-export default ProgramBoothcamp
+export default FirstBoothcamp

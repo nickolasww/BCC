@@ -1,7 +1,9 @@
+import FirstScholarship from "../Components/FirstScholarship"
+
 const Scholarship = () => {
     return(
         <div>
-            Scholarship!
+            <FirstScholarship/>
         </div>
     );
 }
