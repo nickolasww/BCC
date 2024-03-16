@@ -242,7 +242,7 @@ const FirstScholarship = () => {
 
 
 
-        {/* Footer */}
+{/* Footer */}
         <div className=" h-[392px] w-screen  bg-purple-300">
         <div className=" flex space-x-[10px] absolute ">
             <img className=" mt-[80px] ml-[100px] w-[37px] h-[16px]"src={Logo}></img>

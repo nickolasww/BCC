@@ -1,4 +1,4 @@
-import FirstOtp from "../Components/FirstOtp"
+import FirstOtp from "../Components/FirstOtp.jsx"
 
 const Otp= () => {
     return(
