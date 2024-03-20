@@ -16,7 +16,6 @@ import TiktokPurple from "../images/SocialMediaIcon/TiktokPurple.svg"
 import TwitterPurple from "../images/SocialMediaIcon/TwitterPurple.svg"
 import WhatsappPurple from "../images/SocialMediaIcon/WhatsappPurple.svg"
 import {Link} from "react-router-dom"
-
 const FirstHome = () => { 
 
     return(
@@ -28,7 +27,7 @@ const FirstHome = () => {
                 <Link to="/"><h1 className=" font-black h-4 mt-3 text-base">Scofinity</h1></Link>
                 <ul className=" mt-3 flex pl-60 space-x-7 cursor-pointer">
                     <Link to="/"><li className="">Home</li></Link>
-                    <Link to="/AboutUs"><li>About Us</li></Link>
+                    <li className="">About Us</li>
                     <Link to="/Scholarship"><li>Scholarship</li></Link>
                     <Link to="/ProgramBoothcamp"><li>Bootcamp & Program</li></Link>
                     <Link to="/Help"><li>Help</li></Link>
@@ -160,7 +159,7 @@ const FirstHome = () => {
             <p className="text-purple-100 w-[350px] pt-[32px]">Temukan beasiswa impian anda dan dapatkan informasi lengkap tentang beasiswa dan persyaratan pendaftarannya </p>
 
             <div className="pt-[37px]">
-                <h1 className=" absolute px-[32px] py-[8px] bg-purple-100 rounded-full  font-bold">Apply Now</h1>
+               <button> <h1 className=" absolute px-[32px] py-[8px] bg-purple-100 rounded-full  font-bold">Apply Now</h1></button>
             </div>
         </div>
 </div>
@@ -169,25 +168,53 @@ const FirstHome = () => {
 <div className="h-screen w-screen bg-white">
     <h1 className="pt-[50px] pl-[600px] text-2xl font-extrabold">Frequently Asked Questions </h1>
     <p className="pt-[12px] pl-[50px] text-center text-xl font-normal leading-[30px]">Everything you need to know about the product and billing</p>
-
+{/* 1 */}
     <div className=" ml-[300px] mt-[128px] w-[990px] p-[32px] border-2 border-purple-300 rounded-[10px]">
-        <h2 className="font-bold">Apakah program ini cocok untuk saya yang memiliki jadwal yang padat?</h2>
+        <div className="collapse collapse-arrow ">
+            <input type="radio" name="my-accordion-2" /> 
+        <div className="collapse-title ">
+            <h2 className="font-bold text-[18px]">Apakah program ini cocok untuk saya yang memiliki jadwal yang padat?</h2>
+        </div>
+            <div className="collapse-content text-[18px]"> 
+                <p>Ya, program ini menyediakan fleksibilitas waktu untuk memenuhi kebutuhan peserta. Kami memahami jadwal, dan kami berusaha memberikan akses yang nyaman untuk pembelajaran.</p>
+            </div>
+        </div>
     </div>
-
+{/* 2 */}
     <div className="ml-[300px] mt-[32px] w-[990px] p-[32px] border-2 border-purple-300 rounded-[10px]">
-        <h2 className="font-bold">Bagaimana cara mendapatkan sertifikat pengakuan?</h2>
-        <p>Sertifikat pengakuan akan diberikan setelah peserta berhasil menyelesaikan semua komponen program dan memenuhi persyaratan kelulusan.</p>
+    <div className="collapse collapse-arrow ">
+            <input type="radio" name="my-accordion-2" /> 
+        <div className="collapse-title ">
+            <h2 className="font-bold text-[18px]">Bagaimana cara mendapatkan sertifikat pengakuan?</h2>
+        </div>
+            <div className="collapse-content text-[18px]"> 
+            <p>Sertifikat pengakuan akan diberikan setelah peserta berhasil menyelesaikan semua komponen program dan memenuhi persyaratan kelulusan.</p>
+            </div>
     </div>
-
-    <div className="ml-[300px] mt-[32px] w-[990px] p-[32px] border-2 border-purple-300 rounded-[10px]">
-        <h2 className="font-bold">Apa yang membuat program Schofinity berbeda dengan program pembelajaran lainnya?</h2>
-        <p>Program ini unggul dalam menyatukan workshop, bootcamp, dan mentoring untuk memberikan pengalaman pembelajaran yang komprehensif dan praktis, memastikan pertumbuhan peserta dari berbagai aspek.</p>
-
     </div>
-
+{/* 3 */}
     <div className="ml-[300px] mt-[32px] w-[990px] p-[32px] border-2 border-purple-300 rounded-[10px]">
-        <h2 className="font-bold">Apa jenis mentor yang akan membimbing peserta?</h2>
-        <p>Para mentor adalah ahli dalam bidangnya dan memiliki pengalaman yang luas. Mereka berkomitmen untuk memberikan panduan personal kepada peserta, membantu mereka mencapai tujuan karir dan pengembangan profesional.</p>
+    <div className="collapse collapse-arrow ">
+            <input type="radio" name="my-accordion-2" /> 
+        <div className="collapse-title ">
+            <h2 className="font-bold text-[18px]">Apa yang membuat program Schofinity berbeda dengan program pembelajaran lainnya?</h2>
+        </div>
+            <div className="collapse-content text-[18px]"> 
+                <p>Program ini unggul dalam menyatukan workshop, bootcamp, dan mentoring untuk memberikan pengalaman pembelajaran yang komprehensif dan praktis, memastikan pertumbuhan peserta dari berbagai aspek.</p>
+            </div>
+    </div>
+    </div>
+{/* 4 */}
+    <div className="ml-[300px] mt-[32px] w-[990px] p-[32px] border-2 border-purple-300 rounded-[10px]">
+    <div className="collapse collapse-arrow ">
+            <input type="radio" name="my-accordion-2" /> 
+        <div className="collapse-title ">
+            <h2 className="font-bold text-[18px]">Apa jenis mentor yang akan membimbing peserta?</h2>
+        </div>
+            <div className="collapse-content text-[18px]"> 
+            <p>Para mentor adalah ahli dalam bidangnya dan memiliki pengalaman yang luas. Mereka berkomitmen untuk memberikan panduan personal kepada peserta, membantu mereka mencapai tujuan karir dan pengembangan profesional.</p>
+            </div>
+    </div>
     </div>
 
 {/* Still have Questions */}
@@ -197,7 +224,7 @@ const FirstHome = () => {
         <p className="pl-[510px] text-gray-500 text-[18px] font-normal leading-[27px] ">Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
         
         <div className=" pl-[715px] h-[164px] mt-[32px]">
-            <h1 className="px-[32px] py-[8px] w-[170px] h-[45px] text-center border-2 border-purple-300 rounded-full  font-bold text-purple-300">Get in Touch</h1>
+            <button><h1 className="px-[32px] py-[8px] w-[170px] h-[45px] text-center border-2 border-purple-300 rounded-full  font-bold text-purple-300">Get in Touch</h1></button>
         </div>
     </div>
 
@@ -277,8 +304,6 @@ const FirstHome = () => {
 
 </div>
 </div>
-
-
 
 
 

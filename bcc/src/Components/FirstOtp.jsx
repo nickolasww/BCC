@@ -30,47 +30,45 @@ const FirstOtp = () => {
             </div>
 
              {/* Login Register Page */}
-        <div className=" w-96 pl-60 pr-60 pt-10 pb-30 mr-48 mt-8 mb-32 rounded-3xl bg-white border-2 absolute">
+        <div className="rounded-[50px] mt-[50px] mr-[70px] bg-white border-2 absolute">
             {/* Judul */}
-            <form className=" -ml-60 -mr-60 -mt-10 pr-10 p-16 justify-center">
-                <h1 className=" text-3xl -mt-10 -mb-5 font-bold">Create Account</h1>
-                {/* Full Name */}
-                <div className="">
-                    <input className="input-box text-base px-4 py-1 mb-4 mt-9 w-full rounded-full border-2 border-gray-400 bg-transparent" type="text" placeholder="Full Name" required/>
+            <form className="h-[450px] p-[20px] justify-center m-[64px] border-red-900 border-4">
+            {/* -ml-60 -mr-60 -mt-10 pr-10 p-16 */}
+                <h1 className=" text-3xl -mt-10 -mb-5 font-bold">Verify Your Account</h1>
+                <p className="pt-[25px]">An Authorization code has been sent to your email</p>
+                {/* 1*/}
+            <div className="flex">
+                <div className=" text-base h-[80px] w-[60px] text-center rounded-[15px] border-2 border-gray-400 bg-transparent ">
+                    <input className=" text-base h-[80px] w-[60px] text-center rounded-[15px] hidden" type="number" required/>
                 </div>
-                {/* Email*/}
+                {/* 2*/}
                 <div className="">
-                    <input className="input-box text-base px-4 py-1 mb-4  w-full rounded-full border-2 border-gray-400 bg-transparent" type="text" placeholder="Email Address" required/>
+                    <input className="input-box text-base h-[80px] w-[40px] p-[32px] justify-items-center rounded-[15px] border-2 border-gray-400 bg-transparent" type="text"  required/>
                 </div>
-                {/* Password*/}
+                {/* 3*/}
                 <div className="">
-                    <input className="input-box text-base px-4 py-1 mb-4 w-full rounded-full border-2 border-gray-400 bg-transparent" type="Password" placeholder="Password" required/>
+                    <input className="input-box text-base h-[80px] w-[60px] p-[32px] justify-items-center rounded-[15px] border-2 border-gray-400 bg-transparent" type="text"  required/>
                 </div>
-                {/* Konfirmasi Password */}
+                {/* 4 */}
                 <div className="">
-                    <input className="input-box text-base px-4 py-1 mb-4  w-full rounded-full border-2 border-gray-400 bg-transparent" type="text" placeholder="Konfirmasi Password " required/>
+                    <input className="input-box text-base h-[80px] w-[60px] p-[32px] justify-items-center rounded-[15px] border-2 border-gray-400 bg-transparent" type="text"  required/>
                 </div>
+                {/* 5 */}
+                <div className="">
+                    <input className="input-box text-base h-[80px] w-[60px] p-[32px] justify-items-center rounded-[15px] border-2 border-gray-400 bg-transparent" type="text" maxLength={1} required/>
+                </div>
+                {/* 6 */}
+                <div className="">
+                    <input className="input-box text-base h-[80px] w-[60px] p-[32px] justify-items-center rounded-[15px] border-2 border-gray-400 bg-transparent" type="text"  required/>
+                </div>
+            </div>
                 {/* Remember Me */}
-                <div className="text-sm ">
-                    <label><input Type="CheckBox"/>I agree to the <Link>terms of service</Link> and <Link>privacy policy</Link></label>
+                <div className="text-sm text-center">
+                    <p>didn't receive the code? Resend Code</p>
                 </div>
                 {/* Login Button */}
-                <button className=" w-full h-full px-2 py-1 mt-5 mb-4 rounded-full border-2 border-purple-300 bg-purple-300 text-white font-semibold " type="submit">Sign Up</button>
-                {/* Or */}
-                <div className="text-center mt-5">
-                    <p>Or Sign Up With</p>
-                </div>
-                {/* Icon */}
-                <div className="flex justify-center space-x-8 mt-9 px-8">
-                    <img className="border-2 rounded-full p-2" src={Google}></img>
-                    <img className="border-2 rounded-full p-2" src={Facebook}></img>
-                    <img className="border-2 rounded-full p-2" src={Instagram}></img>
-                    <img className="border-2 rounded-full p-2 " src={Tweet}></img>
-                    <img className="border-2 rounded-full p-2" src={Linkedin}></img>
-                </div>
-                {/* Sign up link */}
-                <div className="text-center mt-9">
-                    <p>already Have an account? <a href=" " className="font-bold text-purple-300">Log In</a></p>
+                <div>
+                    <button className=" w-full h-full px-2 py-1 mt-5 mb-4 rounded-full border-2 border-purple-300 bg-purple-300 text-white font-semibold " type="submit">Next</button>
                 </div>
             </form>
             </div>

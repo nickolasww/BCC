@@ -55,7 +55,7 @@ const FirstSignUp = () => {
                     <label><input Type="CheckBox"/>I agree to the <Link>terms of service</Link> and <Link>privacy policy</Link></label>
                 </div>
                 {/* Login Button */}
-                <button className=" w-full h-full px-2 py-1 mt-5 mb-4 rounded-full border-2 border-purple-300 bg-purple-300 text-white font-semibold " type="submit"><Link to="/Otp">Sign Up</Link></button>
+                <button className=" w-full h-full px-2 py-1 mt-5 mb-4 rounded-full border-2 border-purple-300 bg-purple-300 text-white font-semibold " type="submit">Sign Up</button>
                 {/* Or */}
                 <div className="text-center mt-5">
                     <p>Or Sign Up With</p>

@@ -62,5 +62,9 @@ export default {
 
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    darkTheme: "light",
+    base: false, 
+  },
   }

@@ -13,11 +13,32 @@ import TiktokPurple from "../images/SocialMediaIcon/TiktokPurple.svg"
 import TwitterPurple from "../images/SocialMediaIcon/TwitterPurple.svg"
 import WhatsappPurple from "../images/SocialMediaIcon/WhatsappPurple.svg"
 
+import W1 from "../images/PopularWorkshop/W1.svg"
+import W2 from "../images/PopularWorkshop/W2.svg"
+import W3 from "../images/PopularWorkshop/W3.svg"
+import W4 from "../images/PopularWorkshop/W4.svg"
+import W5 from "../images/PopularWorkshop/W5.svg"
+import W6 from "../images/PopularWorkshop/W6.svg"
+import W7 from "../images/PopularWorkshop/W7.svg"
+
+
+import B1 from "../images/Popular Bootcamp/B1.svg"
+import B2 from "../images/Popular Bootcamp/B2.svg"
+import B3 from "../images/Popular Bootcamp/B3.svg"
+import B4 from "../images/Popular Bootcamp/B4.svg"
+
+import M1 from "../images/Popular Mentoring/M1.svg"
+import M2 from "../images/Popular Mentoring/M2.svg"
+import M3 from "../images/Popular Mentoring/M3.svg"
+import M4 from "../images/Popular Mentoring/M4.svg"
+
+import Test1 from "../images/Boothtestimoni/Test1.svg"
+
 const FirstBoothcamp= () => { 
     return(
         <>
 {/* Nav bar */}
-<div className="sticky z-50 top-0 font-Poppins w-[1540px] px-42 py-7  bg-white">
+<div className="fixed z-50 top-0 font-Poppins w-[1540px] px-42 py-7  bg-white">
     <div className=" flex pl-20 space-x-1 text-center ">
         <img className="w-12 h-4 mt-4"src={Logo}></img>
         <Link to="/"><h1 className=" font-black h-4 mt-3 text-base">Scofinity</h1></Link>
@@ -33,14 +54,12 @@ const FirstBoothcamp= () => {
         <Link to="/Login"><h1 className="border-2 bg-purple-300 rounded-full px-7 py-2 text-white font-bold">Log in</h1></Link>
     </div>
     </div>
-
-    {/*  */}
 </div>
 
 {/* Header */}
 <div className="h-screen w-screen bg-purple-300 font-Poppins">
-    <img className="absolute pl-[900px] pt-[80px]" src={BoothHeader}></img>
-    <h1 className="pl-[100px] pt-[100px] w-[600px] text-[60px] font-extrabold text-white">Find Your Perfect Mentor</h1>
+    <img className="absolute pl-[900px] pt-[150px]" src={BoothHeader}></img>
+    <h1 className="pl-[100px] pt-[200px] w-[600px] text-[60px] font-extrabold text-white">Find Your Perfect Mentor</h1>
     <p className=" pl-[100px] text-white text-[18px] w-[520px] pt-[7px]">We help you find perfect mentor for 1-on-1 lessons. It is completely free and private</p>
 
     <div className="pt-[64px] pl-[100px] " >
@@ -101,7 +120,7 @@ const FirstBoothcamp= () => {
 {/* popular WorkShop */}
 <div className="w-screen h-screen font-Poppins">
     <div className="absolute">
-        <h1 className="text-[32px] font-extrabold pl-[100px]">Popular Workshop</h1>
+        <h1 className="text-[32px] font-extrabold pl-[100px]">Workshop Terbaru</h1>
         <p className="text-[18px] font-normal pl-[100px]">Enhance your knowledge and skills</p>
     </div>
     <div className="absolute pl-[1150px] ">
@@ -109,39 +128,95 @@ const FirstBoothcamp= () => {
         </div>
     {/* Card */}
     <div className=" absolute pt-[50px] pl-[100px] ">
-        <div className="absolute  mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={W1}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Strategies for Compelling Writing </h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <Link to="/StudyAbroad" ><h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1></Link>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[330px] mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[330px] mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={W2}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Ace Your Scholarship Interview </h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[660px] mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[650px] mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={W3}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[250px] font-bold text-[14px]">Winning Startegies for Beating Scholarship Deadlines</h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[1000px] mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[970px] mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={W4}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Effective Communication in Scholarship Interviews</h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
         {/* bawah */}
-        <div className="absolute  mt-[450px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  mt-[500px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={W5}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">UnderStanding Scholarship Application Requirements </h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[330px] mt-[450px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[330px] mt-[500px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={W6}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Steps to Securing Scholarships </h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[660px] mt-[450px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[650px] mt-[500px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={W7}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">building Your Scholarship Portofolio</h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
     </div>
 
 {/*  Popular BoothCamp*/}
 <div className="absolute pt-[1000px]">
-        <h1 className="text-[32px] font-extrabold pl-[100px]">Popular Boothcamp</h1>
+        <h1 className="text-[32px] font-extrabold pl-[100px]">Boothcamp Terbaru</h1>
         <p className="text-[18px] font-normal pl-[100px] ">Enhance your knowledge and skills</p>
     </div>
     <div className="absolute pl-[1150px] pt-[1000px] ">
@@ -149,87 +224,146 @@ const FirstBoothcamp= () => {
         </div>
     {/* Card */}
     <div className=" absolute pt-[1050px] pl-[100px] ">
-        <div className="absolute  mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+    <div className="absolute  mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={B1}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Strategies for Compelling Writing </h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[330px] mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[330px] mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={B2}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Ace Your Scholarship Interview </h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[660px] mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[650px] mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={B3}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[250px] font-bold text-[14px]">Winning Startegies for Beating Scholarship Deadlines</h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[1000px] mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
-        </div>
-
-        {/* bawah */}
-        <div className="absolute  mt-[450px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
-        </div>
-
-        <div className="absolute  ml-[330px] mt-[450px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
-        </div>
-
-        <div className="absolute  ml-[660px] mt-[450px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[970px] mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={B4}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Effective Communication in Scholarship Interviews</h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
     </div>
 
 {/* Mentoring 1 0n 1 */}
-    <div className="absolute pt-[2000px]">
+    <div className="absolute pt-[1600px]">
         <h1 className="text-[32px] font-extrabold pl-[100px]">mentoring 1-on-1</h1>
         <p className="text-[18px] font-normal pl-[100px] ">Enhance your knowledge and skills</p>
     </div>
-    <div className="absolute pl-[1200px] pt-[2000px] ">
+    <div className="absolute pl-[1200px] pt-[1600px] ">
             <h1 className="border-[3px] border-purple-300 text-purple-300 font-bold rounded-full h-[50px] px-[32px] py-[12px]">All mentor</h1>
         </div>
     {/* Card */}
-    <div className=" absolute pt-[2050px] pl-[100px] ">
-        <div className="absolute  mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+    <div className=" absolute pt-[1700px] pl-[100px] ">
+    <div className="absolute  mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={M1}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Strategies for Compelling Writing </h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[330px] mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[330px] mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={M2}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Ace Your Scholarship Interview </h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[660px] mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[650px] mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={M3}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[250px] font-bold text-[14px]">Winning Startegies for Beating Scholarship Deadlines</h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
 
-        <div className="absolute  ml-[1000px] mt-[64px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
-        </div>
-
-        {/* bawah */}
-        <div className="absolute  mt-[450px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
-        </div>
-
-        <div className="absolute  ml-[330px] mt-[450px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
-        </div>
-
-        <div className="absolute  ml-[660px] mt-[450px] w-[285px] h-[350px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-900 bg-red-900">
-            <h1>Strategies for Compelling Writing </h1>
+        <div className="absolute  ml-[970px] mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+            <img className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute" src={M4}></img>
+            <div className="absolute">
+                <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">Effective Communication in Scholarship Interviews</h1>
+                <p className="text-[12px]">21 Maret 2024</p>
+                <p className="text-[12px] ">Rp 25.000</p>
+            <div className="absolute pt-[15px] -pl-[100px]">
+                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">Daftar</h1>
+            </div>
+            </div>
         </div>
     </div>
 
 </div>
 
-<div className="h-screen w-scree"></div>
-<div className=" h-screen w-screen "></div>
-<div className=" h-[800px] w-screen"></div>
 
-<div className="h-[1440px] w-screen ">
-    <h1>Testimonials</h1>
-    <h1>What Our student say about out program</h1>
+<div className=" h-screen w-screen"></div>
+<div className=" h-[800px] w-screen "></div>
+
+<div className="h-screen w-screen font-Poppins ">
+    <h1 className="pl-[690px] font-normal text-[18px]">Testimonials</h1>
+    <h1 className="pl-[550px] w-[950px] font-extrabold text-[32px] text-center">What Our student say about out program</h1>
+
+
+    <div className="absolute ml-[100px] mt-[100px] w-[390px] h-[340px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+        <img className="absolute -mt-[70px]" src={Test1}></img>
+        <p className="text-[14px] pt-[30px] text-justify">Saya sangat beruntung dapat mengikuti bootcamp ini! Instruktur sangat berkompeten dan memberikan materi dengan sangat jelas. Mentoringnya juga luar biasa, saya mendapatkan panduan dan dukungan yang tak ternilai dari mentor saya. Hasilnya, saya sekarang memiliki keterampilan baru dan percaya diri untuk menghadapi proyek-proyek yang lebih kompleks. Terima kasih bootcamp dan mentor!</p>
+        <h1 className="pt-[35px] font-bold text-[14px]">Karian Lynn</h1>
+        <p className="text-[14px]">Beasiswa Pendidikan Indonesia </p>
+    </div>
+
+    <div className="absolute ml-[550px] mt-[100px] w-[390px] h-[340px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+        <img className="absolute -mt-[70px]" src={Test1}></img>
+        <p className="text-[14px] pt-[30px] text-justify">Saya sangat beruntung dapat mengikuti bootcamp ini! Instruktur sangat berkompeten dan memberikan materi dengan sangat jelas. Mentoringnya juga luar biasa, saya mendapatkan panduan dan dukungan yang tak ternilai dari mentor saya. Hasilnya, saya sekarang memiliki keterampilan baru dan percaya diri untuk menghadapi proyek-proyek yang lebih kompleks. Terima kasih bootcamp dan mentor!</p>
+        <h1 className="pt-[35px] font-bold text-[14px]">Karian Lynn</h1>
+        <p className="text-[14px]">Beasiswa Pendidikan Indonesia </p>
+    </div>
+
+    <div className="absolute ml-[1000px] mt-[100px] w-[390px] h-[340px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+        <img className="absolute -mt-[70px]" src={Test1}></img>
+        <p className="text-[14px] pt-[30px] text-justify">Saya sangat beruntung dapat mengikuti bootcamp ini! Instruktur sangat berkompeten dan memberikan materi dengan sangat jelas. Mentoringnya juga luar biasa, saya mendapatkan panduan dan dukungan yang tak ternilai dari mentor saya. Hasilnya, saya sekarang memiliki keterampilan baru dan percaya diri untuk menghadapi proyek-proyek yang lebih kompleks. Terima kasih bootcamp dan mentor!</p>
+        <h1 className="pt-[35px] font-bold text-[14px]">Karian Lynn</h1>
+        <p className="text-[14px]">Beasiswa Pendidikan Indonesia </p>
+    </div>
 </div>
-
 
 
 {/* Footer */}
