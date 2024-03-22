@@ -30,11 +30,18 @@ const FirstHome = () => {
                     <li className="">About Us</li>
                     <Link to="/Scholarship"><li>Scholarship</li></Link>
                     <Link to="/ProgramBoothcamp"><li>Bootcamp & Program</li></Link>
-                    <Link to="/Help"><li>Help</li></Link>
+                        <details className="dropdown ">
+                        <summary className=" bg-transparent">Help</summary>
+                        <ul className=" p-2 menu dropdown-content   rounded-box w-52 grid grid-cols-1 divide-y">
+                        <li className=" btn bg-white rounded-b-[0px]">Contact Us</li>
+                        <li className=" btn bg-white rounded-[0px]">Feedback Form</li>
+                        <li className=" btn bg-white rounded-[0px] rounded-b-[5px]"><Link to="/DaftarMitra">Daftar Mitra</Link></li>
+                        </ul>
+                        </details>
                 </ul>
             <div className=" flex pl-56 space-x-2 cursor-pointer">
-                <Link to="/SignUp"><h1 className=" border-2 border-purple-300 rounded-full px-7 py-2 text-purple-300 font-bold">Sign Up</h1></Link>
-                <Link to="/Login"><h1 className="border-2 bg-purple-300 rounded-full px-7 py-2 text-white font-bold">Log in</h1></Link>
+                <Link to="/SignUp"><h1 className=" border-2 border-purple-300 rounded-full px-7 py-2 text-purple-300 font-bold hover:bg-purple-100 hover:border-purple-100">Sign Up</h1></Link>
+                <Link to="/Login"><h1 className="border-2 bg-purple-300 rounded-full px-7 py-2 text-white font-bold hover:bg-purple-100 hover:border-purple-100 hover:text-purple-200">Log in</h1></Link>
             </div>
             </div>
 </div>
@@ -56,8 +63,8 @@ const FirstHome = () => {
                 </div>
                 {/* tombol start dan learn more */}
                 <div className="flex font-bold space-x-3 pl-[200px] pt-[100px] " >
-                    <Link><h1 className=" bg-purple-300 rounded-full px-[32px] py-[13px] text-white font-bold  ">Start Now</h1></Link>
-                    <Link><h1 className=" border-2 border-purple-300 rounded-full px-[32px] py-[13px] text-purple-300 font-bold">Learn More</h1></Link>
+                    <Link><h1 className=" bg-purple-300 rounded-full px-[32px] py-[13px] text-white font-bold  hover:bg-purple-100 hover:text-purple-200">Start Now</h1></Link>
+                    <Link><h1 className=" border-2 border-purple-300 rounded-full px-[32px] py-[13px] text-purple-300 font-bold hover:bg-purple-100 hover:border-purple-100">Learn More</h1></Link>
                 </div>
                 {/* Gambar */}
                 <div className="w-[494px] h-[477px] ml-[900px] -mt-[400px]">
@@ -70,7 +77,7 @@ const FirstHome = () => {
 <div className="font-Poppins h-screen w-screen ">
             {/* button */}
             <div className="flex absolute pt-[80px] font-bold pl-[1200px]">
-            <Link><h1 className="border-2 bg-purple-300 rounded-full px-[32px] py-[13px] text-white font-bold">View All </h1></Link> 
+            <Link><h1 className="border-2 bg-purple-300 rounded-full px-[32px] py-[13px] text-white font-bold hover:bg-purple-100 hover:border-purple-100 hover:text-purple-200">View All </h1></Link> 
             </div>
             {/* Judul */}
             <div className="pt-[50px] pl-[100px] text-3xl font-extrabold">
@@ -79,7 +86,7 @@ const FirstHome = () => {
             </div>
             {/* card */}
     <div className="flex flex-col mt-[77px] ">
-            <div className=" ml-[90px] w-[387px] h-[454px] p-[32px] justify-items-center rounded-3xl border-2 shadow-sm bg-purple-100 ">
+            <div className=" ml-[90px] w-[387px] h-[454px] p-[32px] justify-items-center rounded-3xl border-2 shadow-sm bg-purple-100 hover:bg-gray-400 ">
                 <img src={Tanoto}></img>
                 <h2 className="font-bold pt-[26px]">Tanoto Foundation</h2>
                 <p>January 22,2024-Februari 24,2024</p>
@@ -90,7 +97,7 @@ const FirstHome = () => {
                     </div>
                 </div>
             </div>
-            <div className=" absolute ml-[522px] w-[387px] h-[454px] p-[32px] justify-items-center rounded-3xl border-2 shadow-sm bg-purple-100">
+            <div className=" absolute ml-[522px] w-[387px] h-[454px] p-[32px] justify-items-center rounded-3xl border-2 shadow-sm bg-purple-100 hover:bg-gray-400 ">
                 <img src={Unggulan}></img>
                 <h2 className="font-bold pt-[26px]">Beasiswa Unggulan By kemendikbud Indonesia</h2>
                 <p>January 22,2024-Februari 24,2024</p>
@@ -101,7 +108,7 @@ const FirstHome = () => {
                     </div>
                 </div>
             </div>
-            <div className="absolute ml-[950px] w-[387px] h-[454px] p-[32px] justify-items-center rounded-3xl border-2 shadow-sm bg-purple-100">
+            <div className="absolute ml-[950px] w-[387px] h-[454px] p-[32px] justify-items-center rounded-3xl border-2 shadow-sm bg-purple-100 hover:bg-gray-400 ">
                 <img src={LPDP}></img>
                 <h2 className="font-bold pt-[26px]">Beasiswa Reguler LPDP</h2>
                 <p>January 22,2024-Februari 24,2024</p>
@@ -120,19 +127,19 @@ const FirstHome = () => {
 {/* Best Program*/}
 <div className=" flex flex-col rounded-t-[100px] font-Poppins h-screen w-screen bg-purple-100 ">
             <h1 className=" ml-[50px] pt-[50px] pl-[600px] text-3xl font-extrabold">Our Best Program</h1>
-                <div className=" ml-[150px] w-[387px] h-[454px] p-[32px] mt-[64px] justify-items-center rounded-3xl border-2 shadow-sm bg-white">
+                <div className=" ml-[150px] w-[387px] h-[454px] p-[32px] mt-[64px] justify-items-center rounded-3xl border-2 shadow-sm bg-white hover:bg-purple-400 hover:text-white">
                     <img className="w-[116px] h-[120px] mx-[90px]" src={Praktik}></img>
                     <h2 className="py-[26px] font-extrabold mx-[40px] w-[300px]">WorkShop Berbasis Praktik</h2>
                     <p>Menghadirkan serangkaian workshop interaktif yang didesain untuk memberikan pemahaman mendalam tentang konsep-konsep kunci. Peserta akan terlibat dalam proyek proyek praktik yang memberikan pengalaman langsung dan keterampilan yang dapat diterapkan di dunia nyata</p>
                 </div>
     
-                <div className="absolute ml-[580px] w-[387px] h-[454px] p-[32px] mt-[160px] justify-items-center rounded-3xl border-2 shadow-sm bg-white">
+                <div className="absolute ml-[580px] w-[387px] h-[454px] p-[32px] mt-[160px] justify-items-center rounded-3xl border-2 shadow-sm bg-white hover:bg-purple-400 hover:text-white">
                     <img className=" w-[116px] h-[120px] mx-[90px]" src={Mentoring}></img>
                     <h2 className="py-[26px] font-extrabold mx-[80px] w-[300px]">Mentoring 1-on-1</h2>
                     <p>Setiap peserta akan mendapatkan bimbingan personal dari para mentor ahli dalam bidangnya. Sesi mentoring akan membantu peserta mengatasi tantangan khusus mereka, serta memberikan arahan karir dan nasihat pribadi untuk pengembangan profesional</p>
                 </div>
 
-                <div className="absolute ml-[1000px] w-[387px] h-[454px] p-[32px] mt-[160px] justify-items-center rounded-3xl border-2 shadow-sm bg-white">
+                <div className="absolute ml-[1000px] w-[387px] h-[454px] p-[32px] mt-[160px] justify-items-center rounded-3xl border-2 shadow-sm bg-white hover:bg-purple-400 hover:text-white">
                     <img className="w-[116px] h-[120px] mx-[90px]" src={Special}></img>
                     <h2 className="py-[26px] font-extrabold mx-[70px] w-[300px]">Specialized Bootcamp</h2>
                     <p>Bootcamp berfokus pada penguatan keterampilan teknis dan keahlian praktis melalui pendekatan intensif. Tim instruktur ahli akan memandu peserta melalui. tantangan nyata, memastikan pemahaman yang mendalam dan pengaplikasian konsep secara cepat.</p>
@@ -149,17 +156,17 @@ const FirstHome = () => {
         <h1 className="pl-[100px] text-5.4xl font-extrabold w-[800px] pt-[64px]">Free <span className="text-purple-300">Scholarship</span> Provider By Schofinity</h1>
         <p className="pl-[100px] w-[600px] text-l">Selamat datang di Schofinity, platform beasiswa yang bertujuan memberikan dukungan komprehensif kepada para pelajar dan mahasiswa untuk meraih peluang pendidikan lebih baik. Kami percaya bahwa setiap individu berpotensi untuk mencapai puncak kesuksesannya melalui pendidikan, dan Schofinity hadir untuk membantu mewujudkannya.</p>
         <div className="pt-[64px] pl-[100px]">
-            <h1 className=" absolute px-[32px] py-[8px] bg-purple-100 rounded-full  font-bold ">Get Started</h1>
+            <h1 className=" absolute px-[32px] py-[8px] bg-purple-100 rounded-full  font-bold hover:bg-purple-400 hover:text-white">Get Started</h1>
         </div>
 
 <div className="h-screen w-screen bg-purple-100">
-        <div className=" absolute ml-[300px] mt-[200px] w-[978px] h-[363px] p-[32px]  justify-items-center rounded-3xl  shadow-sm bg-purple-300">
+        <div className=" absolute ml-[300px] mt-[200px] w-[978px] h-[363px] p-[32px]  justify-items-center rounded-[50px]  shadow-sm bg-purple-400">
             <img className=" absolute ml-[500px]" src={ApplyCard}></img>
             <h1 className="text-purple-100 font-extrabold text-3xl w-[450px] ">For Those of you who Plan to Get a <span className="text-orange-300">Scholarship</span></h1>
             <p className="text-purple-100 w-[350px] pt-[32px]">Temukan beasiswa impian anda dan dapatkan informasi lengkap tentang beasiswa dan persyaratan pendaftarannya </p>
 
             <div className="pt-[37px]">
-               <button> <h1 className=" absolute px-[32px] py-[8px] bg-purple-100 rounded-full  font-bold">Apply Now</h1></button>
+               <button> <h1 className=" absolute px-[32px] py-[8px] bg-purple-100 rounded-full  font-bold hover:bg-purple-400 hover:text-white hover:shadow-md">Apply Now</h1></button>
             </div>
         </div>
 </div>
@@ -224,7 +231,7 @@ const FirstHome = () => {
         <p className="pl-[510px] text-gray-500 text-[18px] font-normal leading-[27px] ">Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
         
         <div className=" pl-[715px] h-[164px] mt-[32px]">
-            <button><h1 className="px-[32px] py-[8px] w-[170px] h-[45px] text-center border-2 border-purple-300 rounded-full  font-bold text-purple-300">Get in Touch</h1></button>
+            <button><h1 className="px-[32px] py-[8px] w-[170px] h-[45px] text-center border-2 border-purple-300 rounded-full  font-bold text-purple-300 hover:bg-purple-100 hover:border-purple-100">Get in Touch</h1></button>
         </div>
     </div>
 

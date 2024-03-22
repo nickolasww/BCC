@@ -17,27 +17,72 @@ import Card7 from "../images/ScholarCard/Card7.svg"
 import Card8 from "../images/ScholarCard/Card8.svg"
 import LPDP from "../images/LPDP.svg"
 import Unggulan from "../images/Unggulan.svg"
+import { useEffect, useState } from "react"
+import ScholarshipPortofolio from "../Pages/ScholarshipPortofolio"
 
 const FirstScholarship = () => { 
+    const baseUrl = 'https://schofinity-c284f28bf9dd.herokuapp.com/v1';
+    let url = `${baseUrl}/scholarships`;
+    
+    const [scholarships, setScholarships] = useState([]);
+    useEffect(() => {
+    fetch(url)
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            console.log(data.data);
+            setScholarships(data.data);
+        });
+}, []);
+
+
+
     return(
         <>
+<div>
+{scholarships.map((scholarship) => (
+    <h1><CardScholarship key={scholarship.id} 
+    name={scholarship.name} 
+    description={scholarship.description}
+    startDate={scholarship.startDate}
+    endDate={scholarship.endDate}
+    image={'https://qesyijmpdyoqrlezgwqg.supabase.co/storage/v1/object/public/scholarships/'+ scholarship.image}
+
+    educations={scholarship.educations}
+
+        
+    
+    />
+    
+    </h1>
+))}
+</div>;
+        
 {/* Nav bar */}
 <div className="fixed z-50 top-0 font-Poppins w-[1540px] px-42 py-7  bg-white">
-    <div className=" flex pl-20 space-x-1 text-center ">
-        <img className="w-12 h-4 mt-4"src={Logo}></img>
-        <Link to="/"><h1 className=" font-black h-4 mt-3 text-base">Scofinity</h1></Link>
-            <ul className=" mt-3 flex pl-60 space-x-7 cursor-pointer">
-                <Link to="/"><li>Home</li></Link>
-                <Link to="/AboutUs"><li>About Us</li></Link>
-                <Link to="/Scholarship"><li>Scholarship</li></Link>
-                <Link to="/ProgramBoothcamp"><li>Bootcamp & Program</li></Link>
-                <Link to="/Help"><li>Help</li></Link>
-            </ul>
-    <div className=" flex pl-56 space-x-2 cursor-pointer">
-        <Link to="/SignUp"><h1 className=" border-2 border-purple-300 rounded-full px-7 py-2 text-purple-300 font-bold">Sign Up</h1></Link>
-        <Link to="/Login"><h1 className="border-2 bg-purple-300 rounded-full px-7 py-2 text-white font-bold">Log in</h1></Link>
-    </div>
-    </div>
+            <div className=" flex pl-20 space-x-1 text-center ">
+                <img className="w-12 h-4 mt-4"src={Logo}></img>
+                <Link to="/"><h1 className=" font-black h-4 mt-3 text-base">Scofinity</h1></Link>
+                <ul className=" mt-3 flex pl-60 space-x-7 cursor-pointer">
+                    <Link to="/"><li className="">Home</li></Link>
+                    <li className="">About Us</li>
+                    <Link to="/Scholarship"><li>Scholarship</li></Link>
+                    <Link to="/ProgramBoothcamp"><li>Bootcamp & Program</li></Link>
+                        <details className="dropdown ">
+                        <summary className=" bg-transparent">Help</summary>
+                        <ul className=" p-2 menu dropdown-content   rounded-box w-52 grid grid-cols-1 divide-y">
+                        <li className=" btn bg-white rounded-b-[0px]">Contact Us</li>
+                        <li className=" btn bg-white rounded-[0px]">Feedback Form</li>
+                        <li className=" btn bg-white rounded-[0px] rounded-b-[5px]"><Link to="/DaftarMitra">Daftar Mitra</Link></li>
+                        </ul>
+                        </details>
+                </ul>
+            <div className=" flex pl-56 space-x-2 cursor-pointer">
+                <Link to="/SignUp"><h1 className=" border-2 border-purple-300 rounded-full px-7 py-2 text-purple-300 font-bold">Sign Up</h1></Link>
+                <Link to="/Login"><h1 className="border-2 bg-purple-300 rounded-full px-7 py-2 text-white font-bold">Log in</h1></Link>
+            </div>
+            </div>
 </div>
 
 {/* Find your Dream Scholarship */}
@@ -111,24 +156,24 @@ const FirstScholarship = () => {
             </div>
         </div>
 
-        <div className=" absolute flex flex-col ">
-            <div className=" ml-[1000px] mt-[70px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
+        <div className="  flex flex-col ">
+        <button><Link to ="/Scholarship/BeasiswaLPDP"><div className=" ml-[1000px] mt-[70px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
             <img className=" cursor-pointer absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={LPDP}></img>
-                <h2 className="font-bold pt-[175px] text-[14px]">Beasiswa Sobat Bumi Pertamina 2024</h2>
-                <p className="text-[12px]">February,2024-April,2024</p>
+                <h2 className="font-bold pt-[175px] text-[14px] text-start">Beasiswa Sobat Bumi Pertamina 2024</h2>
+                <p className="text-[12px] text-start">February,2024-April,2024</p>
                 <div className="flex ">
                     <div className="pt-[30px]  flex space-x-[10px]">
                     <p className=" text-[11px]  py-[5px] w-[30px] text-center bg-white rounded-full ">S1</p>
                     <p className=" text-[11px]  py-[5px] w-[30px] text-center bg-white rounded-full ">S2</p>
                     </div>
                     <div className="pt-[30px] ml-[90px]">
-                        <Link to =""><p className="  px-[16px] py-[4px] bg-success rounded-full text-white font-bold text-[14px] ">Open</p></Link>
+                    <p className="  px-[16px] py-[4px] bg-success rounded-full text-white font-bold text-[14px] ">Open</p>
                     </div>
                 </div>
-            </div>
+            </div></Link></button>
         </div>
 {/* kolom 2  */}
-        <div className=" absolute flex flex-col ">
+        <div className="  flex flex-col -mt-[400px]">
             <div className=" ml-[400px] mt-[450px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
                 <img className=" absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={LPDP}></img>
                 <h2 className="font-bold pt-[175px] text-[14px]">Beasiswa Sobat Bumi Pertamina 2024</h2>
@@ -145,7 +190,7 @@ const FirstScholarship = () => {
             </div>
         </div>
 
-        <div className=" absolute flex flex-col ">
+        <div className=" flex flex-col -mt-[805px]">
             <div className=" ml-[700px] mt-[450px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
                 <img className=" absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={Card2}></img>
                 <h2 className="font-bold pt-[175px] text-[14px]">Beasiswa Sobat Bumi Pertamina 2024</h2>
@@ -161,7 +206,7 @@ const FirstScholarship = () => {
             </div>
         </div>
 
-        <div className=" absolute flex flex-col ">
+        <div className="flex flex-col -mt-[805px]">
             <div className=" ml-[1000px] mt-[450px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
                 <img className=" absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={Card3}></img>
                 <h2 className="font-bold pt-[175px] text-[14px]">Beasiswa Sobat Bumi Pertamina 2024</h2>
@@ -177,7 +222,7 @@ const FirstScholarship = () => {
             </div>
         </div>
 {/* kolom 3 */}
-        <div className=" absolute flex flex-col ">
+        <div className=" flex flex-col -mt-[780px]">
             <div className=" ml-[400px] mt-[830px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
                 <img className=" absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={Card4}></img>
                 <h2 className="font-bold pt-[175px] text-[14px]">Beasiswa Sobat Bumi Pertamina 2024</h2>
@@ -194,7 +239,7 @@ const FirstScholarship = () => {
             </div>
         </div>
 
-        <div className=" absolute flex flex-col ">
+        <div className="  flex flex-col -mt-[1185px]">
             <div className=" ml-[700px] mt-[830px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
                 <img className=" absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={Card5}></img>
                 <h2 className="font-bold pt-[175px] text-[14px]">Beasiswa Sobat Bumi Pertamina 2024</h2>
@@ -210,9 +255,9 @@ const FirstScholarship = () => {
             </div>
         </div>
 
-        <div className=" absolute flex flex-col ">
+        <div className=" flex flex-col -mt-[1185px]">
             <div className=" ml-[1000px] mt-[830px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
-                <Link to="/Scholarship/BeasiswaLPDP" ><img className=" cursor-pointer absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={Card6}></img></Link>
+                <img className=" cursor-pointer absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={Card6}></img>
                 <h2 className="font-bold pt-[175px] text-[14px]">Beasiswa Sobat Bumi Pertamina 2024</h2>
                 <p className="text-[12px]">February,2024-April,2024</p>
                 <div className="flex ">
@@ -226,7 +271,7 @@ const FirstScholarship = () => {
             </div>
         </div>
 {/* kolom 4 */}
-        <div className=" absolute flex flex-col ">
+        <div className="  flex flex-col -mt-[1150px] ">
             <div className=" ml-[400px] mt-[1210px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
                 <img className=" absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={Card7}></img>
                 <h2 className="font-bold pt-[175px] text-[14px]">Beasiswa Sobat Bumi Pertamina 2024</h2>
@@ -244,7 +289,7 @@ const FirstScholarship = () => {
             </div>
         </div>
 
-        <div className=" absolute flex flex-col ">
+        <div className=" flex flex-col -mt-[1560px] ">
             <div className=" ml-[700px] mt-[1210px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
                 <img className=" absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={Card8}></img>
                 <h2 className="font-bold pt-[175px] text-[14px]">Beasiswa Sobat Bumi Pertamina 2024</h2>
@@ -373,7 +418,7 @@ const FirstScholarship = () => {
 
         
 {/* Filter */}
-        <div className=" absolute flex-col ml-[90px] w-[234px] p-[32px] mt-[64px] items-start rounded-3xl border-2 border-gray-500 bg-orange-100 shadow-md">
+        <div className=" absolute flex-col ml-[90px] w-[234px] p-[32px] -mt-[2770px] items-start rounded-3xl border-2 border-gray-500 bg-orange-100 shadow-md">
             <div className="flex ">
                 <img src={FilterIcon}></img>
                 <h1 className="text-[18px] font-bold">Filter</h1>
@@ -382,21 +427,21 @@ const FirstScholarship = () => {
 
             <div className="flex-col flex w-[300px] pt-[12px]">
                 <h1 className="text-[18px] font-bold">Tipe Beasiswa</h1>
-                <label><input type="radio" className="peer/draft" ></input>Dalam Negeri</label>
-                <label><input type="radio" className="peer/draft"></input>Dalam Negeri</label>
+                <label><input type="radio" ></input>Dalam Negeri</label>
+                <label><input type="radio" ></input>Luar Negeri</label>
             </div>
 
             <div className="flex-col flex w-[300px] pt-[12px]">
                 <h1 className="text-[18px] font-bold">Jenis Beasiswa</h1>
-                <label><input type="radio" className="peer"></input>Dalam Negeri</label>
-                <label ><input type="radio"></input>Dalam Negeri</label>
+                <label><input type="radio" ></input>Pemerintah</label>
+                <label ><input type="radio" ></input>Swasta</label>
             </div>
 
             <div className="flex-col flex w-[300px] pt-[12px]">
                 <h1 className="text-[18px] font-bold">Category</h1>
-                <label><input type="radio"></input>Dalam Negeri</label>
-                <label><input type="radio"></input>Dalam Negeri</label>
-                <label><input type="radio"></input>Dalam Negeri</label>
+                <label><input type="radio" ></input>Beasiswa Umum</label>
+                <label><input type="radio" ></input>Prestasi Akademik</label>
+                <label><input type="radio"></input>Non-Akademik</label>
             </div>
 
             <div className="flex-col flex w-[300px] pt-[22px]">
@@ -404,7 +449,7 @@ const FirstScholarship = () => {
             </div>
 
             <div className="  px-[64px] py-[10px] mt-5 mb-4 rounded-full shadow-sm border-2 bg-darkOrange text-white font-semibold justify-items-center">
-                <h1 className="text-[18px] text-center font-semibold leading-7">Apply</h1>
+                <button><h1 className="text-[18px] text-center font-semibold leading-7">Apply</h1></button>
             </div>
 
 
@@ -415,6 +460,39 @@ const FirstScholarship = () => {
 
 </>
 )
+}
+// backend 
+function CardScholarship(props){ 
+    return(
+        <>
+ <div className=" flex">
+            <div className=" ml-[400px]  w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100  ">
+                
+                <img className=" absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]" src={props.image}></img>
+                <h2 className="font-bold pt-[175px] text-[14px]">{props.name}</h2>
+                <p className="text-[12px]">{props.startDate} {props.endDate} </p>
+                <div className="flex ">
+                    <div className="pt-[30px]  flex ">
+                    <p className="text-[11px] pb-[10px] py-[5px] w-[px] text-center bg-white rounded-full">
+
+                    {/*  */}
+                    {props.educations.map((education, index) => (
+                        <span key={index}>
+                            {education.educationName}
+                            {index < props.educations.length - 1 && ", "}
+                        </span>
+                        ))}
+                    </p>
+
+                    </div>
+                    <div className="pt-[30px] ml-[50px]">
+                        <p className="  px-[16px] py-[4px] bg-red-500 rounded-full text-white font-bold text-[14px] ">Close</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </>
+    )
 }
 
 

@@ -55,6 +55,27 @@ const FirstModal = () => {
 
     </div>
 </dialog>
+
+<details className="dropdown">
+  <summary className="m-1 btn">open or close</summary>
+  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</details>
+
+<input type="radio" name="radio-1" />
+<input type="radio" name="radio-1" />
+
+
+<select className="select w-full max-w-xs">
+  <option disabled selected>Pick your favorite Simpson</option>
+  <option>Homer</option>
+  <option>Marge</option>
+  <option>Bart</option>
+  <option>Lisa</option>
+  <option>Maggie</option>
+</select>
         </>
     )
 }

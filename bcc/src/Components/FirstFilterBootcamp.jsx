@@ -1,8 +1,5 @@
 import {Link} from "react-router-dom"
 import Logo from "../images/Logo.svg"
-import Toa from "../images/NotifIcon/Toa.svg"
-import Alert from "../images/NotifIcon/Alert.svg"
-import Ring from "../images/NotifIcon/Ring.svg"
 
 import FacebookPurple from "../images/SocialMediaIcon/FacebookPurple.svg"
 import InstagramPurple from "../images/SocialMediaIcon/InstagramPurple.svg"
@@ -10,11 +7,10 @@ import TiktokPurple from "../images/SocialMediaIcon/TiktokPurple.svg"
 import TwitterPurple from "../images/SocialMediaIcon/TwitterPurple.svg"
 import WhatsappPurple from "../images/SocialMediaIcon/WhatsappPurple.svg"
 
-const FirstNotification= () => { 
+const FirstFilterBootcamp = () => { 
     return(
         <>
-{/* NavBar */}
-<div className="fixed z-50 top-0 font-Poppins w-[1540px] px-42 py-7  bg-white">
+        <div className="fixed z-50 top-0 font-Poppins w-[1540px] px-42 py-7  bg-white">
             <div className=" flex pl-20 space-x-1 text-center ">
                 <img className="w-12 h-4 mt-4"src={Logo}></img>
                 <Link to="/"><h1 className=" font-black h-4 mt-3 text-base">Scofinity</h1></Link>
@@ -39,71 +35,41 @@ const FirstNotification= () => {
             </div>
 </div>
 
+<div className="pt-[200px] font-Poppins">
+    <h1 className="text-[60px] font-extrabold text-center w-[800px] ml-[350px]">Find The Most Exciting Online Course</h1>
 
-<div className=" font-Poppins ml-[100px] mt-[200px] w-[250px] h-[390px] px-[32px] py-[64px] justify-items-center border-2 border-gray-500 rounded-3xl shadow-sm bg-purple-100">
-{/* Navigation profile */}
-    <div className="absolute">
-    <h1 className="font-bold text-[24px] -mt-[20px]">Navigasi Profile</h1>
-    <ul className="space-y-[16px]  text-[18px] pt-[40px] font-bold">
-        <li>Profile Saya</li>
-        <li>Kalender Beasiswa</li>
-        <li>Notifikasi</li>
-        <li>Aktivitas Saya</li>
-        <li>Riwayat Transaksi</li>
-    </ul>
-    </div>
-
-    <div className="absolute pl-[300px] -mt-[70px] space-y-[20px]" >
-        <h1 className="font-bold text-[32px]">Notification</h1>
-        <ul className="flex font-bold text-[20px] space-x-[32px] ">
-            <li>All</li>
-            <li>Beasiswa</li>
-            <li>Workshop & Bootcamp</li>
-        </ul>
-    </div>
-{/* notification */}
-<div className="pt-[100px] pl-[300px] font-Poppins">
-    {/* 1 */}
-    <div className="border-[2px] border-black w-[811px] h-[110px] px-[16px] py-[24px] rounded-t-lg">
-            <div className="w-[56px] h-[56px] absolute rounded-[100px] border-2 p-[10px] bg-purple-100">
-                <img className="absolute " src={Toa}></img>
-            </div>
-                <p className=" w-[700px] font-normal text-[20px] pl-[100px]">Great news! Beasiswa LPDP telah dibuka untuk pendaftaran. Segera daftar sebelum tanggal tutup pendaftaran</p>
-    </div>
-    {/* 2 */}
-        <div className="border-[2px] border-t-[0px] border-black w-[811px] h-[110px] px-[16px] py-[24px] ">
-            <div className="w-[56px] h-[56px] absolute rounded-[100px] border-2 p-[14px] bg-purple-100">
-                <img className="absolute " src={Ring}></img>
-            </div>
-                <p className=" w-[700px] font-normal text-[20px] pl-[100px]">Great news! Beasiswa LPDP telah dibuka untuk pendaftaran. Segera daftar sebelum tanggal tutup pendaftaran</p>
-        </div>
-        {/* 3 */}
-    <div className="h-screen w-screen">
-        <div className="border-[2px] border-t-[0px] border-black w-[811px] h-[110px] px-[16px] py-[24px] ">
-            <div className="w-[56px] h-[56px] absolute rounded-[100px] border-2 p-[14px] bg-purple-100">
-            <img className="absolute" src={Alert}></img>
-            </div>
-            <p className=" w-[700px] font-normal text-[20px] pl-[100px]">Great news! Beasiswa LPDP telah dibuka untuk pendaftaran. Segera daftar sebelum tanggal tutup pendaftaran</p>
-        </div>
-        {/* 4 */}
-        <div className="border-[2px] border-t-[0px] border-black w-[811px] h-[110px] px-[16px] py-[24px] ">
-            <div className="w-[56px] h-[56px] absolute rounded-[100px] border-2 p-[14px] bg-purple-100">
-            <img className="absolute" src={Alert}></img>
-            </div>
-            <p className=" w-[700px] font-normal text-[20px] pl-[100px]">Great news! Beasiswa LPDP telah dibuka untuk pendaftaran. Segera daftar sebelum tanggal tutup pendaftaran</p>
-        </div>
-        {/* 5 */}
-        <div className="border-[2px] border-t-[0px] rounded-b-lg border-black w-[811px] h-[110px] px-[16px] py-[24px] ">
-            <div className="w-[56px] h-[56px] absolute rounded-[100px] border-2 p-[10px] bg-purple-100">
-            <img className="absolute " src={Toa}></img>
-            </div>
-            <p className=" w-[700px] font-normal text-[20px] pl-[100px]">Great news! Beasiswa LPDP telah dibuka untuk pendaftaran. Segera daftar sebelum tanggal tutup pendaftaran</p>
-            </div>
+    <div className="pt-[64px] pl-[400px] " >
+        <input className="rounded-full w-[660px] h-[50px] p-[16px] border-2 bg-transparent" type="text" placeholder="Search Here"></input>
     </div>
 </div>
+
+
+<div className="h-screen w-screen">
+
+<div className=" flex space-x-4 ml-[77px] pt-[64px]">
+        <div className=" px-[32px] py-[10px] mt-5 mb-4 rounded-full border-2 bg-purple-100 font-semibold ">
+            <h1>All</h1>
+        </div>
+
+        <div className="px-[32px] py-[10px] mt-5 mb-4 rounded-full border-[3px] border-purple-300 font-semibold text-purple-300">
+            <h1>Persiapan TOEFL</h1>
+        </div>
+
+        <div className="px-[32px] py-[10px] mt-5 mb-4 rounded-full border-[3px] border-purple-300 font-semibold text-purple-300">
+            <h1>Persiapan WAWANCARA</h1>
+        </div>
+
+        <div className="px-[32px] py-[10px] mt-5 mb-4 rounded-full border-[3px] border-purple-300 font-semibold text-purple-300">
+            <h1>Persiapan ESSAY</h1>
+        </div>
 </div>
 
-<div className="h-screen w-screen"></div>
+</div>
+
+<div className="h-screen w-screen">
+    <h1 className="pl-[700px]">Testimonials</h1>
+    <h1 className="pl-[550px] text-4xl font-extrabold">What Our Alumni Say</h1>\
+</div>
 
 {/* footer */}
 <div className=" h-[392px] w-screen  bg-purple-300">
@@ -178,9 +144,8 @@ const FirstNotification= () => {
     </div>
 
 
+        </>
 
-</>
-)
+    )
 }
-
-export default FirstNotification
+export default FirstFilterBootcamp

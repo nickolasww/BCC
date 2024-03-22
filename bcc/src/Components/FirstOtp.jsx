@@ -38,8 +38,8 @@ const FirstOtp = () => {
                 <p className="pt-[25px]">An Authorization code has been sent to your email</p>
                 {/* 1*/}
             <div className="flex">
-                <div className=" text-base h-[80px] w-[60px] text-center rounded-[15px] border-2 border-gray-400 bg-transparent ">
-                    <input className=" text-base h-[80px] w-[60px] text-center rounded-[15px] hidden" type="number" required/>
+                <div className=" text-base h-[80px] w-[] text-center rounded-[15px] border-2 border-gray-400 bg-transparent ">
+                    <input/><span className=" text-base h-[80px] w-[60px] text-center rounded-[15px] " type="number" required></span>
                 </div>
                 {/* 2*/}
                 <div className="">

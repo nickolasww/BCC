@@ -16,13 +16,16 @@ import ProgramMentoring from "./Pages/ProgramMentoring";
 import Aktivitas from './Pages/Aktivitas';
 import DaftarMitra from './Pages/DaftarMitra';
 import Modal from './Pages/Modal';
+import FilterBootcamp from "./Pages/FilterBootcamp";
+import Calender from "./Pages/Calender";
+
 
 const Routing = createBrowserRouter([
   {
     path: "/",
     element: <Home/>,
   },
-
+  // scholarship
   {
     path: "/Scholarship",
     element: <Scholarship/>,
@@ -31,9 +34,7 @@ const Routing = createBrowserRouter([
     path: "/Scholarship/BeasiswaLPDP",
     element: <BeasiswaLPDP/>,
   },
-
-
-
+// boothcamp
   {
     path: "/ProgramBoothcamp",
     element: <ProgramBoothcamp/>,
@@ -41,6 +42,24 @@ const Routing = createBrowserRouter([
   {
     path: "/ProgramBoothcamp/StudyAbroad",
     element: <StudyAbroad/>,
+  },
+  {
+    path: "/ProgramBoothcamp/ScholarshipPortofolio",
+    element: <ScholarshipPortofolio/>,
+  },
+  {
+    path: "/ProgramBoothcamp/ProgramMentoring",
+    element: <ProgramMentoring/>,
+  },
+  {
+    path: "/ProgramBoothcamp/FilterBootcamp",
+    element: <FilterBootcamp/>,
+  },
+
+
+  {
+    path: "/Calender",
+    element: <Calender/>,
   },
 
 
@@ -56,10 +75,19 @@ const Routing = createBrowserRouter([
   },
 
   {
+    path: "/Otp",
+    element: <Otp/>,
+  },
+
+  {
     path: "/Modal",
     element: <Modal/>,
   },
 
+  {
+    path: "/DaftarMitra",
+    element: <DaftarMitra/>,
+  },
 ]);
 
 const Router = () => {
@@ -69,25 +97,13 @@ const Router = () => {
 export default Router;
 //   return (
 //     <Router>
-//       <Routes>
-//         <Route path='/' element={<Home/>} />
 //         <Route path='/AboutUs' element={<AboutUs/>} />
-//         <Route path='/Scholarship' element={<Scholarship/>}/>
-//         <Route path='/ProgramBoothcamp' element={<ProgramBoothcamp/>}/>
-//         <Route path='/Help' element={<Help/>}/>
-//         <Route path='/SignUp' element={<SignUp/>}/>
-//         <Route path='/Login' element={<Login/>}/>
-//         <Route path='/Otp' element={<Otp/>}/>
 
 
 //         <Route path='/profile' element={<Profile/>}/>
 //         <Route path='/Notification' element={<Notification/>}/>
-//         <Route path='/StudyAbroad' element={<StudyAbroad/>} />
-//         <Route path='/BeasiswaLPDP' element={<BeasiswaLPDP/>}/>
-//         <Route path='/ScholarshipPortofolio' element={<ScholarshipPortofolio/>}/>
-//         <Route path='/ProgramMentoring' element={<ProgramMentoring/>}/>
 //         <Route path='/Aktivitas' element={<Aktivitas/>}/>
-//         <Route path='/DaftarMitra' element={<DaftarMitra/>}/>
+
 
 //       </Routes>
 //     </Router>
