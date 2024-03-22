@@ -101,7 +101,27 @@ const Routing = createBrowserRouter([
     element: <Profile/>,
   },
 
+  {
+    path: "/notification",
+    element: <Notification/>,
+  },
 
+  
+  {
+    path: "/aktivitas",
+    element: <Aktivitas/>,
+  },
+
+
+  {
+    path: "/calender",
+    element: <Calender/>,
+  },
+
+  {
+    path: "/afterlogin",
+    element: <AfterLogin/>,
+  },
 ]);
 
 const Router = () => {

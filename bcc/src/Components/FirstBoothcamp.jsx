@@ -41,6 +41,15 @@ const FirstBoothcamp = () => {
       .catch((err) => console.log(err));
   }, []);
 
+
+  const [Booth , setBoot] = useState([]); 
+
+  useEffect(() => {
+    axios.get("https://schofinity-c284f28bf9dd.herokuapp.com/v1/classes?typeId=1")
+    .then((res) => setBoot (res.data.data))
+    .catch((err) => console.log(err));
+  });
+
   return (
     <>
       {/* Nav bar */}
@@ -135,7 +144,7 @@ const FirstBoothcamp = () => {
           </div>
         </div>
 
-        <div className="absolute">
+        <div className="pt-[400px] absolute">
           <h1 className="text-[32px] font-extrabold pl-[100px]">
             Workshop Terbaru
           </h1>
@@ -144,13 +153,23 @@ const FirstBoothcamp = () => {
           </p>
         </div>
 
+        <div className=" pl-[1150px] pt-[400px] ">
+          <button>
+            <Link to="">
+              <h1 className="border-[3px] border-purple-300 text-purple-300 font-bold rounded-full h-[50px] px-[32px] py-[12px]">
+                All Workshop
+              </h1>
+            </Link>
+          </button>
+        </div>
+
       <div>
         {classes.map((c, i) => {
           return (
-            <div className="flex ">
-            <div className=" relative ml-[100px] mt-[px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2">
+            <div className=" ">
+            <div className=" flex flex-col ml-[100px] mt-[100px] w-[270px] h-[380px] p-[32px]  rounded-3xl shadow-sm border-gray-300 border-2">
             <img
-              className="-mt-[32px]  w-[268px] h-[200px] -ml-[32px] absolute rounded-t-[20px]"
+              className="-mt-[32px] w-[268px] h-[200px] -ml-[32px] absolute rounded-t-[20px]"
               src={"https://qesyijmpdyoqrlezgwqg.supabase.co/storage/v1/object/public/classes/" + c.image}
             ></img>
             <div className="">
@@ -176,171 +195,9 @@ const FirstBoothcamp = () => {
         })}
       </div>
 
-      {/* why choose us  */}
-      <div className="w-screen h-screen font-Poppins">
-       
 
-       
-
-       
-
-        
-      </div>
-
-      {/* popular WorkShop */}
-      <div className="w-screen h-screen font-Poppins">
-        <div className=" pl-[1150px] ">
-          <button>
-            <Link to="">
-              <h1 className="border-[3px] border-purple-300 text-purple-300 font-bold rounded-full h-[50px] px-[32px] py-[12px]">
-                All Workshop
-              </h1>
-            </Link>
-          </button>
-        </div>
-        {/* Card */}
-        <div className="  pt-[50px] pl-[100px] ">
-          <div className="  mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={W1}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">
-                Strategies for Compelling Writing{" "}
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className=" pt-[15px] -pl-[100px]">
-                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                  Daftar
-                </h1>
-              </div>
-            </div>
-          </div>
-
-          <div className="  ml-[330px] -mt-[380px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={W2}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">
-                Ace Your Scholarship Interview{" "}
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className=" pt-[15px] -pl-[100px]">
-                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                  Daftar
-                </h1>
-              </div>
-            </div>
-          </div>
-
-          <div className="  ml-[650px] -mt-[380px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={W3}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[250px] font-bold text-[14px]">
-                Winning Startegies for Beating Scholarship Deadlines
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className=" pt-[15px] -pl-[100px]">
-                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                  Daftar
-                </h1>
-              </div>
-            </div>
-          </div>
-
-          <div className="  ml-[970px] -mt-[380px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={W4}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">
-                Effective Communication in Scholarship Interviews
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className=" pt-[15px] -pl-[100px]">
-                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                  Daftar
-                </h1>
-              </div>
-            </div>
-          </div>
-
-          {/* bawah */}
-          <div className="  mt-[50px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={W5}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">
-                UnderStanding Scholarship Application Requirements{" "}
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className=" pt-[15px] -pl-[100px]">
-                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                  Daftar
-                </h1>
-              </div>
-            </div>
-          </div>
-
-          <div className="  ml-[330px] -mt-[380px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={W6}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">
-                Steps to Securing Scholarships{" "}
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className=" pt-[15px] -pl-[100px]">
-                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                  Daftar
-                </h1>
-              </div>
-            </div>
-          </div>
-
-          <div className="  ml-[650px] -mt-[380px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={W7}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">
-                building Your Scholarship Portofolio
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className=" pt-[15px] -pl-[100px] ">
-                <button>
-                  <Link to="/ProgramBoothcamp/ScholarshipPortofolio">
-                    <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                      Daftar
-                    </h1>
-                  </Link>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/*  Popular BoothCamp*/}
-        <div className="absolute mt-[100px]">
+          {/*  Popular BoothCamp*/}
+          <div className="absolute mt-[100px]">
           <h1 className="text-[32px] font-extrabold pl-[100px]">
             Boothcamp Terbaru
           </h1>
@@ -348,28 +205,36 @@ const FirstBoothcamp = () => {
             Enhance your knowledge and skills
           </p>
         </div>
+
         <div className="absolute pl-[1150px] mt-[100px] ">
           <h1 className="border-[3px] border-purple-300 text-purple-300 font-bold rounded-full h-[50px] px-[32px] py-[12px]">
             All Boothcamp
           </h1>
         </div>
-        {/* Card */}
-        <div className=" pt-[200px] pl-[100px] ">
-          <div className="  mt-[64px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
+
+
+
+
+
+      <div>
+        {Booth.map((b, i) => {
+          return( 
+            <div className=" ">
+            <div className=" flex flex-col ml-[100px] mt-[200px] w-[270px] h-[380px] p-[32px]  rounded-3xl shadow-sm border-gray-300 border-2">
             <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={B1}
+              className="-mt-[32px] w-[268px] h-[200px] -ml-[32px] absolute rounded-t-[20px]"
+              src={"https://qesyijmpdyoqrlezgwqg.supabase.co/storage/v1/object/public/classes/" + b.image}
             ></img>
             <div className="">
-              <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">
-                Strategies for Compelling Writing
+              <h1 className="pt-[170px] w-[200px] font-bold text-[14px]">
+                {b.name}
               </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
+              <p className="text-[12px]">{b.startDate} {b.endDate}</p>
+              <p className="text-[12px] ">Rp {b.price}</p>
               <div className=" pt-[15px] -pl-[100px]">
                 <button>
                   <Link to="/ProgramBoothcamp/StudyAbroad">
-                    <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
+                    <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold hover:bg-purple-100 hover:text-purple-300">
                       Daftar
                     </h1>
                   </Link>
@@ -377,64 +242,16 @@ const FirstBoothcamp = () => {
               </div>
             </div>
           </div>
-
-          <div className=" ml-[330px] -mt-[380px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={B2}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">
-                Ace Your Scholarship Interview{" "}
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className=" pt-[15px] -pl-[100px]">
-                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                  Daftar
-                </h1>
-              </div>
-            </div>
           </div>
+          )
 
-          <div className="  ml-[650px] -mt-[380px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={B3}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[250px] font-bold text-[14px]">
-                Winning Startegies for Beating Scholarship Deadlines
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className="pt-[15px] -pl-[100px]">
-                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                  Daftar
-                </h1>
-              </div>
-            </div>
-          </div>
 
-          <div className=" ml-[970px] -mt-[380px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2 ">
-            <img
-              className="-mt-[41px] w-[270px] h-[238px] -ml-[32px] absolute"
-              src={B4}
-            ></img>
-            <div className="">
-              <h1 className="pt-[200px] w-[200px] font-bold text-[14px]">
-                Effective Communication in Scholarship Interviews
-              </h1>
-              <p className="text-[12px]">21 Maret 2024</p>
-              <p className="text-[12px] ">Rp 25.000</p>
-              <div className=" pt-[15px] -pl-[100px]">
-                <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold">
-                  Daftar
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        })}
+      </div>
+
+      {/* popular WorkShop */}
+      <div className="w-screen h-screen font-Poppins">
 
         {/* Mentoring 1 0n 1 */}
         <div className=" absolute pt-[70px]">
@@ -534,8 +351,8 @@ const FirstBoothcamp = () => {
         </div>
       </div>
 
-      <div className=" h-screen w-screen"></div>
-      <div className=" h-[900px] w-screen "></div>
+     
+     
 
       <div className="h-screen w-screen font-Poppins ">
         <div className="pt-[10px]">

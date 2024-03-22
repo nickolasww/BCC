@@ -18,88 +18,26 @@ import Footer from "./ReuseAble/Footer";
 import axios from "axios";
 
 const FirstScholarship = () => {
-  // const baseUrl = "https://schofinity-c284f28bf9dd.herokuapp.com/v1";
-  // let url = `${baseUrl}/scholarships`;
+  const baseUrl = "https://schofinity-c284f28bf9dd.herokuapp.com/v1";
+  let url = `${baseUrl}/scholarships`;
 
-  // const [scholarships, setScholarships] = useState([]);
-  // useEffect(() => {
-  //   fetch(url)
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       console.log(data.data);
-  //       setScholarships(data.data);
-  //     });
-  // }, []);
-  const [scholarship, setscholarship] = useState([]);
-
+  const [scholarships, setScholarships] = useState([]);
   useEffect(() => {
-    axios
-      .get("https://schofinity-c284f28bf9dd.herokuapp.com/v1")
-      .then((res) => setscholarship(res.data))
-      .catch((err) => console.log(err));
+    fetch(url)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data.data);
+        setScholarships(data.data);
+      });
   }, []);
+  const [scho, setscho] = useState([]);
 
   return (
     <>
-
-<div>
-        {scholarship.map((s, i) => {
-          return (
-          //   <div className="flex ">
-          //   <div className=" relative ml-[100px] mt-[px] w-[270px] h-[380px] p-[32px] justify-items-center rounded-3xl shadow-sm border-gray-300 border-2">
-          //   <img
-          //     className="-mt-[32px]  w-[268px] h-[200px] -ml-[32px] absolute rounded-t-[20px]"
-          //     src={"https://qesyijmpdyoqrlezgwqg.supabase.co/storage/v1/object/public/classes/" + c.image}
-          //   ></img>
-          //   <div className="">
-          //     <h1 className="pt-[170px] w-[200px] font-bold text-[14px]">
-          //       {c.name}
-          //     </h1>
-          //     <p className="text-[12px]">{c.startDate} {c.endDate}</p>
-          //     <p className="text-[12px] ">Rp {c.price}</p>
-          //     <div className=" pt-[15px] -pl-[100px]">
-          //       <button>
-          //         <Link to="/ProgramBoothcamp/StudyAbroad">
-          //           <h1 className=" bg-purple-300 rounded-full px-[80px] py-[5px] p-[16px] text-white font-bold hover:bg-purple-100 hover:text-purple-300">
-          //             Daftar
-          //           </h1>
-          //         </Link>
-          //       </button>
-          //     </div>
-          //   </div>
-          // </div>
-          // </div>
-
-              <div className="  flex flex-col ">
-              <div className=" ml-[400px] mt-[70px] w-[285px] h-[354px] p-[32px] justify-items-center border-purple-300 rounded-3xl border-2 shadow-sm bg-purple-100 ">
-                <img
-                  className=" absolute -mt-[20px] -ml-[15px] w-[249px] h-[187px]"
-                  src={"https://qesyijmpdyoqrlezgwqg.supabase.co/storage/v1/object/public/scholarships/" + s.image}
-                ></img>
-                <h2 className="font-bold pt-[175px] text-[14px]">
-                  {s.name}
-                </h2>
-                <p className="text-[12px]">February,2024-April,2024</p>
-                <div className="flex ">
-                  <div className="pt-[30px]  flex ">
-                    <p className=" text-[11px]  py-[5px] w-[120px] text-center bg-white rounded-full ">
-                      Mahasiswa Aktif S1
-                    </p>
-                  </div>
-                  <div className="pt-[30px] ml-[50px]">
-                    <p className="  px-[16px] py-[4px] bg-red-500 rounded-full text-white font-bold text-[14px] ">
-                      Close
-                    </p>
-                  </div>
-                </div>
-              </div>
-              </div>
-
-          );
-        })}
-      </div>
+      <div>
+        </div>
       ;{/* Nav bar */}
       <NavBar />
       {/* Find your Dream Scholarship */}

@@ -14,6 +14,7 @@ import Special from "../../images/Special.svg";
 import { Link } from "react-router-dom";
 import Footer from "../ReuseAble/Footer";
 import NavbarAfterLogin from "../ReuseAble/NavbarAfterLogin";
+import Calender from "../../Pages/Calender";
 const FirstAfterLogin = () => {
   return (
     <>
@@ -210,6 +211,10 @@ const FirstAfterLogin = () => {
               </button>
             </div>
           </div>
+        </div>
+
+        <div className="h-[1200px] w-screen">
+          <Calender/>
         </div>
 
         {/* FAQ */}
