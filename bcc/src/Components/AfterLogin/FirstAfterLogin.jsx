@@ -1,28 +1,26 @@
-import FotoHeader from "../images/FotoHeader.svg";
-import Phone from "../images/Phone.svg";
-import Tanoto from "../images/Tanoto.svg";
-import LPDP from "../images/LPDP.svg";
-import Unggulan from "../images/Unggulan.svg";
-import ApplyCard from "../images/ApplyCard.svg";
+import FotoHeader from "../../images/FotoHeader.svg";
+import Phone from "../../images/Phone.svg";
+import Tanoto from "../../images/Tanoto.svg";
+import LPDP from "../../images/LPDP.svg";
+import Unggulan from "../../images/Unggulan.svg";
+import ApplyCard from "../../images/ApplyCard.svg";
 
 
-import Praktik from "../images/Praktik.svg";
-import Mentoring from "../images/Mentoring.svg";
-import Special from "../images/Special.svg";
+import Praktik from "../../images/Praktik.svg";
+import Mentoring from "../../images/Mentoring.svg";
+import Special from "../../images/Special.svg";
+
 
 import { Link } from "react-router-dom";
-import NavBar from "./ReuseAble/NavBar";
-import Footer from "./ReuseAble/Footer";
-
-
-const FirstHome = () => {
+import Footer from "../ReuseAble/Footer";
+import NavbarAfterLogin from "../ReuseAble/NavbarAfterLogin";
+const FirstAfterLogin = () => {
   return (
     <>
- 
-      {/* Header */}
+    <NavbarAfterLogin/>
 
-      <div className="font-Poppins h-screen w-screen bg-purple-100">
-        <NavBar />
+    <div className="font-Poppins h-screen w-screen bg-purple-100">
+    <NavbarAfterLogin/>
         <div className="circlePosition w-[500px] h-[450px] bg-purple-300 rounded-[100%] absolute z-1 bottom-[30%] -left-[10%] translate-y-60 blur-[180px]"></div>
         <div className="circlePosition w-[500px] h-[450px] bg-purple-300 rounded-[100%] absolute z-1 bottom-[30%] left-[65%] translate-y-60 blur-[180px] "></div>
         <section className="absolute">
@@ -45,7 +43,7 @@ const FirstHome = () => {
                 Start Now
               </h1>
             </Link>
-            <Link to>
+            <Link>
               <h1 className=" border-2 border-purple-300 rounded-full px-[32px] py-[13px] text-purple-300 font-bold hover:bg-purple-100 hover:border-purple-100">
                 Learn More
               </h1>
@@ -173,7 +171,7 @@ const FirstHome = () => {
         <div className="circlePosition w-[600px] h-[600px] bg-purple-300 rounded-[100%] absolute z-1 bottom-[2%] -left-[10%] translate-y-60 blur-[180px]"></div>
         <div className="circlePosition w-[500px] h-[450px] bg-purple-300 rounded-[100%] absolute z-1 bottom-[70%] left-[65%] translate-y-60 blur-[180px] "></div>
         <img className="absolute pl-[900px] pt-[50px]" src={Phone}></img>
-        <h1 id='AboutUs' className="font-bold text-2xl pt-[30px] pl-[100px]">About Us</h1>
+        <h1 className="font-bold text-2xl pt-[30px] pl-[100px]">About Us</h1>
         <h1 className="pl-[100px] text-5.4xl font-extrabold w-[800px] pt-[64px]">
           Free <span className="text-purple-300">Scholarship</span> Provider By
           Schofinity
@@ -326,4 +324,5 @@ const FirstHome = () => {
     </>
   );
 };
-export default FirstHome;
+
+export default FirstAfterLogin;

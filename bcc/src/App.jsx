@@ -18,6 +18,8 @@ import DaftarMitra from './Pages/DaftarMitra';
 import Modal from './Pages/Modal';
 import FilterBootcamp from "./Pages/FilterBootcamp";
 import Calender from "./Pages/Calender";
+import AfterLogin from "./Pages/AfterLogin";
+import profile from "../src/Pages/Profile";
 
 
 const Routing = createBrowserRouter([
@@ -31,7 +33,7 @@ const Routing = createBrowserRouter([
     element: <Scholarship/>,
   },
   {
-    path: "/Scholarship/BeasiswaLPDP",
+    path: "/Scholarship/:id",
     element: <BeasiswaLPDP/>,
   },
 // boothcamp
@@ -68,6 +70,10 @@ const Routing = createBrowserRouter([
     path: "/Login",
     element: <Login/>,
   },
+  {
+    path: "/Login/:id",
+    element: <AfterLogin/>,
+  },
 
   {
     path: "/SignUp",
@@ -88,6 +94,14 @@ const Routing = createBrowserRouter([
     path: "/DaftarMitra",
     element: <DaftarMitra/>,
   },
+
+
+  {
+    path: "/profile",
+    element: <Profile/>,
+  },
+
+
 ]);
 
 const Router = () => {
